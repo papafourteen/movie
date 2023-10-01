@@ -7,7 +7,7 @@ import { SingleContent } from './SingleContent'
 
 export const SearchResults = ({searchText,type}) => {
     const [page,setPage]=useState(1)
-    //console.log(searchText,type);
+    console.log(searchText,type);
     const urlSearch=`https://api.themoviedb.org/3/search/${type}?api_key=${import.meta.env.VITE_API_KEY}&include_adult=false&query=${searchText}&page=${page}`
     const {data,status} =useQuery(['searchedItems',urlSearch],getData)
     status=='success' && console.log(data);
@@ -23,7 +23,8 @@ export const SearchResults = ({searchText,type}) => {
         title={obj.title || obj.name}
         type={type}
         date={obj.release_date || obj.first_air_date}
-        vote={obj.vote_average} 
+        vote={obj.vote_average}
+        
       />
     ))
   :

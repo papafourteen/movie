@@ -3,7 +3,7 @@
     position:fixed;
     display: flex;
     justify-content: center;
-    background-color: indigo;
+    background: linear-gradient(to right, #355c7d, #6c5b7b, #c06c84);
     color: white;
     font-size: 4vw;
     margin:0;

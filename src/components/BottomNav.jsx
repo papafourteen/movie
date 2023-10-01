@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import SearchIcon from '@mui/icons-material/Search';
+import StarIcon from '@mui/icons-material/Star';
 
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import MovieIcon from '@mui/icons-material/Movie';
@@ -13,11 +14,11 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles=makeStyles({
     root:{
-        width:320,
+        width:380,
         position:'fixed',
         bottom:0,
-        zIndex:100,
-        backgroundColor:'indigo!important',
+        background:'linear-gradient(to right, #355c7d, #6c5b7b, #c06c84)',
+        //backgroundColor:'magenta!important',
         boxShadow:'0 -5px 5px -5px white'
     }
 })
@@ -54,6 +55,11 @@ export const BottomNav=()=>{
              value='/search'
              to='/search'
         />
+        <BottomNavigationAction label="Stars" icon={<StarIcon />} 
+             component={NavLink}
+             value='/stars'
+             to='/stars'
+             />
       </BottomNavigation>
     </Box>
   );
